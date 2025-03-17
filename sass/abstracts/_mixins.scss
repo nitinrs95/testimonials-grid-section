@@ -1,0 +1,74 @@
+@use "./variables" as var;
+
+@mixin card-modifier($card-color) {
+  @if $card-color == var.$color-purple-dark {
+    h2 {
+      color: var.$color-white;
+    }
+
+    span {
+      color: rgba(var.$color-white, 0.5);
+    }
+
+    h3 {
+      color: var.$color-white;
+    }
+
+    blockquote {
+      color: rgba(var.$color-light-grey, 0.7);
+    }
+  }
+
+  @if $card-color == var.$color-dark-grey {
+    h2 {
+      color: var.$color-white;
+    }
+
+    span {
+      color: rgba(var.$color-white, 0.5);
+    }
+
+    h3 {
+      color: var.$color-medium-grey;
+    }
+
+    blockquote {
+      color: rgba(var.$color-white, 0.7);
+    }
+  }
+
+  @if $card-color == var.$color-white {
+    h2 {
+      color: var.$color-medium-grey;
+    }
+
+    span {
+      color: rgba(var.$color-medium-grey, 0.5);
+    }
+
+    h3 {
+      color: var.$color-medium-grey;
+    }
+
+    blockquote {
+      color: rgba(var.$color-medium-grey, 0.7);
+    }
+  }
+  @if $card-color == var.$color-medium-grey {
+    h2 {
+      color: var.$color-white;
+    }
+
+    span {
+      color: rgba(var.$color-white, 0.5);
+    }
+
+    h3 {
+      color: var.$color-white;
+    }
+
+    blockquote {
+      color: rgba(var.$color-light-grey, 0.7);
+    }
+  }
+}

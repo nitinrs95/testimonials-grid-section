@@ -1,0 +1,76 @@
+@use "../abstracts/" as a;
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  border-radius: 8px;
+  padding: 3rem;
+
+  &__header {
+    display: flex;
+    gap: 1.7rem;
+  }
+
+  &__image {
+    width: 2.8rem;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  &__designation {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  &__quote {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    color: rgba($color: #000000, $alpha: 1);
+  }
+
+  &--purple {
+    background-color: a.$color-purple-dark;
+    @include a.card-modifier(a.$color-purple-dark);
+    grid-area: card1;
+
+    img {
+      outline: 3px solid a.$color-purple-light;
+    }
+  }
+
+  &--grey {
+    background-color: a.$color-medium-grey;
+    @include a.card-modifier(a.$color-medium-grey);
+    grid-area: card2;
+  }
+
+  &--white {
+    background-color: a.$color-white;
+    @include a.card-modifier(a.$color-white);
+    grid-area: card3;
+  }
+
+  &--black {
+    background-color: a.$color-dark-grey;
+    @include a.card-modifier(a.$color-dark-grey);
+    grid-area: card4;
+
+    img {
+      outline: 3px solid a.$color-purple-dark;
+    }
+  }
+
+  &--card-white-2 {
+    grid-area: card5;
+  }
+}
